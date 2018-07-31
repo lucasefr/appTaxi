@@ -8,7 +8,7 @@ class Concessionaria extends Model
 {
     //
     protected $table = 'concessionarias';
-    protected $primaryKey = 'idConcessionarias';
+    protected $primaryKey = 'idConcessionaria';
     public $timestamps = true;
     protected $fillable = [
         'nome',

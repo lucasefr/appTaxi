@@ -36,6 +36,16 @@
                             Taxistas
                         </a>
                     </li>
+                    <li class="navbar-nav mr-auto">
+                        <a class="navbar-brand" href="{{ url('/concessionarias') }}">
+                            Concessionaria
+                        </a>
+                    </li>
+                    <li class="navbar-nav mr-auto">
+                        <a class="navbar-brand" href="{{ url('/testDrives') }}">
+                            TestDrive
+                        </a>
+                    </li>
                     @endif
                 </ul>
                 

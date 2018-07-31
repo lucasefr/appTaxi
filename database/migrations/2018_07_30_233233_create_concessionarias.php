@@ -17,6 +17,7 @@ class CreateConcessionarias extends Migration
             $table->increments('idConcessionaria');
             $table->string('nome');
             $table->string('endereco');
+            $table->string('numero');
             $table->string('bairro');
             $table->string('cidade');
             $table->string('uf');

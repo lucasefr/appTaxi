@@ -11,12 +11,15 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Auth::routes();
-//Route::resource('usuarios', 'UsuarioController');
-Route::get('/usuarios', 'UsuarioController@index2');
+Route::resource('/usuarios', 'UsuarioController');
+Route::resource('/concessionarias', 'ConcessionariaController');
+
 
 Route::get('/home', 'HomeController@index')->name('home');
+

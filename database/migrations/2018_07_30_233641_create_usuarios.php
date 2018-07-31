@@ -17,7 +17,7 @@ class CreateUsuarios extends Migration
             $table->increments('idUsuarios');
             $table->string('nome');
             $table->string('email');
-            $table->string('senha');
+            $table->string('idAparelho');
             $table->string('placaDoCarro');
             $table->string('telefone');
             $table->timestamps();
