@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use App\Concessionaria; 
 
 class TestDrive extends Model
 {
@@ -16,7 +18,7 @@ class TestDrive extends Model
     ];
     protected $guarded = [];
 
-    public function concessionaria(): hasOne{
-        
+    public function concessionaria(): BelongsTo{
+        return $this->belongsTo(Concessionaria::class);
     }
 }
