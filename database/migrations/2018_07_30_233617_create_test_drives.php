@@ -16,7 +16,7 @@ class CreateTestDrives extends Migration
         Schema::create('testDrives', function (Blueprint $table) {
             $table->increments('idTestDrives');
             $table->date('data');
-            $table->date('hora');
+            $table->integer('hora');
             $table->timestamps();
         });
     }

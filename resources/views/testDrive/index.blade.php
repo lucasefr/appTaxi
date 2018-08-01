@@ -1,9 +1,9 @@
 @extends('layouts.app')
-@section('conteudo')
+@section('content')
 <div class="row">
 	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-		<h3>Lista de Taxistas <a href="usuarios/create"><button class="btn btn-success">Novo</button></a></h3>
-		<!--@include('usuarios.search')-->
+		<h3>datas marcadas <a href="testDrives/create"><button class="btn btn-success">Novo</button></a></h3>
+		
 	</div>
 </div>
 
@@ -18,22 +18,22 @@
 					
 					<!--<th>Opções</th>-->
 				</thead>
-               @foreach ($taxista as $usuarios)
+               @foreach ($testDrives as $test)
 				<tr>
-					<td>{{ $usuarios->id}}</td>
-					<td>{{ $usuarios->name}}</td>
-					<td>{{ $usuarios->email}}</td>
+					<td>{{ $test->id}}</td>
+					<td>{{ $test->name}}</td>
+					<td>{{ $test->email}}</td>
 					<!--<td id="salvar">
-						<<a href="{{URL::action('UsuariosController@edit',$users->id)}}"><button class="btn btn-info">Editar</button></a>
-                        <a href="#" data-target="#modal-delete-{{$users->id}}" data-toggle="modal"><button class="btn btn-danger">Excluir</button></a>
+						<<a href="{{URL::action('TestDriveController@edit',$users->id)}}"><button class="btn btn-info">Editar</button></a>
+                        <a href="#" data-target="#modal-delete-{{$test->id}}" data-toggle="modal"><button class="btn btn-danger">Excluir</button></a>
 						 
 					</td>-->
 				</tr>
-				<!--@include('usuarios.modal')-->
+				<!--@include('testDrives.modal')-->
 				@endforeach
 			</table>
 		</div>
-		{{$usuarios->render()}}
+		{{$testDrives->render()}}
 	</div>
 </div>
 

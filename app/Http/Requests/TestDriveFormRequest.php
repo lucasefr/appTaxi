@@ -13,7 +13,7 @@ class TestDriveFormRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,6 +25,9 @@ class TestDriveFormRequest extends FormRequest
     {
         return [
             //
+            'data'=>'required|max:20',
+            'hora'=>'required|max:10',
+            
         ];
     }
 }

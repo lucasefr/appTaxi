@@ -19,6 +19,7 @@ Route::get('/', function () {
 Auth::routes();
 Route::resource('/usuarios', 'UsuarioController');
 Route::resource('/concessionarias', 'ConcessionariaController');
+Route::resource('/testDrives', 'TestDriveController');
 
 
 Route::get('/home', 'HomeController@index')->name('home');
