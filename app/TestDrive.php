@@ -12,7 +12,11 @@ class TestDrive extends Model
     public $timestamps = true;
     protected $fillable = [
         'data',
-        'hora',
+        'concessionaria_id',
     ];
     protected $guarded = [];
+
+    public function concessionaria(): hasOne{
+        
+    }
 }

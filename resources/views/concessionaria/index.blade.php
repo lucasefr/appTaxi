@@ -27,13 +27,7 @@
                     <td>{{ $con->numero}}</td>
                     <td>{{ $con->bairro}}</td>
                     <td>{{ $con->cidade}}</td>
-					<td>
-						<a href="{{URL::action('ConcessionariaController@edit',$con->idConcessionaria)}}"><button class="btn btn-info">Editar</button></a>
-                        {!!Form::Open(['method'=>'DELETE', 'url'=>'/concessionarias/'.$con->idConcessionaria])!!}
-                        <button type="submit" class="btn btn-danger">Excluir</button></a>
-                        {!!Form::Close()!!}
-						 
-					</td>
+					
 				</tr>
 				
 				@endforeach

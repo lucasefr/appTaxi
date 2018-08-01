@@ -15,8 +15,10 @@ class CreateTestDrives extends Migration
     {
         Schema::create('testDrives', function (Blueprint $table) {
             $table->increments('idTestDrives');
-            $table->date('data');
-            $table->integer('hora');
+            $table->integer('concessionaria_id')->nullable();
+            //$table->integer('concessionaria_id')->unsigned();
+            // $table->foreign('concessionaria_id')->references('idConcessionaria')->on('concessionarias')->default("1");
+            $table->string('data');
             $table->timestamps();
         });
     }

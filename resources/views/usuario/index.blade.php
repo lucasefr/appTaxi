@@ -7,7 +7,7 @@
 	</div>
 </div>
 
-<div class="row" onload="teste()">
+<div class="row">
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 		<div class="table-responsive">
 			<table class="table table-striped table-bordered table-condensed table-hover">
@@ -18,21 +18,17 @@
 					
 					<!--<th>Opções</th>-->
 				</thead>
-                @foreach ($usuarios as $usuarios)
+                @foreach ($usuarios as $user)
 				<tr>
-					<td>{{ $usuarios->idAparelho}}</td>
-					<td>{{ $usuarios->nome}}</td>
-					<td>{{ $usuarios->email}}</td>
-					<td id="salvar">
-						<<a href="{{URL::action('UsuarioController@edit',$usuarios->idUsuarios)}}"><button class="btn btn-info">Editar</button></a>
-                        {!!Form::Open(['method'=>'DELETE', 'url'=>'/usuarios/'.$usuarios->idUsuarios])!!}
-                        <button type="submit" class="btn btn-danger">Excluir</button></a>
-                        {!!Form::Close()!!}
-					</td>
+					<td>{{ $user->idUsuarios}}</td>
+					<td>{{ $user->nome}}</td>
+					<td>{{ $user->telefone}}</td>
+					
 				</tr>
 				
 				@endforeach
 			</table>
+			{{$usuarios->render()}}
 		</div>
 		
 	</div>

@@ -26,7 +26,7 @@ class TestDriveFormRequest extends FormRequest
         return [
             //
             'data'=>'required|max:20',
-            'hora'=>'required|max:10',
+            'concessionaria_id'=>'max:20',
             
         ];
     }

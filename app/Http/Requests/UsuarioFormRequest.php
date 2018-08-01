@@ -26,10 +26,10 @@ class UsuarioFormRequest extends FormRequest
         return [
             //
             'nome'=>'required|max:100',
-            'email'=>'required|max:100',
-            'idAparelho'=>'required|max:100',
+            'email'=>'max:100',
+            'idAparelho'=>'max:100',
             'telefone'=>'required|max:50',
-            'placaDoCarro'=>'required|max:20'
+            'placaDoCarro'=>'max:20'
         ];
     }
 }

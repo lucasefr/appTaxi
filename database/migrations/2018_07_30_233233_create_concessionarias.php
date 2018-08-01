@@ -21,9 +21,9 @@ class CreateConcessionarias extends Migration
             $table->string('bairro');
             $table->string('cidade');
             $table->string('uf');
-            $table->string('complemento');
+            $table->string('complemento')->nullable();
             $table->string('cep');
-            $table->string('telefone');
+            $table->string('telefone')->nullable();
             $table->timestamps();
         });
     }

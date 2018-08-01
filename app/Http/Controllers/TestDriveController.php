@@ -23,7 +23,7 @@ class TestDriveController extends Controller
     		$query=trim($request->get('searchText'));
     		$testDrives=DB::table('testDrives')
             ->where('data', 'LIKE', '%'.$query.'%')
-            ->where('hora', 'LIKE', '%'.$query.'%')
+            
             ->orderBy('idTestDrives', 'asc')
     		->paginate(7);
     		return view('testDrive.index', [
@@ -37,8 +37,8 @@ class TestDriveController extends Controller
  
     public function store(TestDriveFormRequest $request){
     	$testDrives = new TestDrive;
-		$testDrives->data=$request->get('data');
-        $testDrives->hora=$request->get('hora');
+        $testDrives->data=$request->get('data');
+        $testDrives->concessionaria_id=$request->get('concessionaria_id');
         $testDrives->save();
     	return Redirect::to('testDrives');
     }
@@ -53,7 +53,7 @@ class TestDriveController extends Controller
     public function update(TestDriveFormRequest $request, $idTestDrives){
     	$testDrives=TestDrive::findOrFail($idTestDrives);
 		$testDrives->data=$request->get('data');
-		$testDrives->hora=$request->get('hora');
+		$testDrives->concessionaria_id=$request->get('concessionaria_id');
         $testDrives->update();
     	return Redirect::to('testDrives');
     }
