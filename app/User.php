@@ -4,6 +4,9 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+
+use App\TestDrive;
 
 class User extends Authenticatable
 {
@@ -26,4 +29,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function testDrive(): HasOne{
+        return $this->hasOne(TestDrive::class);
+    }
 }

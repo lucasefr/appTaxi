@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use App\Concessionaria; 
+use App\User; 
 
 class TestDrive extends Model
 {
@@ -17,6 +18,10 @@ class TestDrive extends Model
         'concessionaria_id',
     ];
     protected $guarded = [];
+
+    public function user(): BelongsTo{
+        return $this->belongsTo(User::class);
+    }
 
     public function concessionaria(): BelongsTo{
         return $this->belongsTo(Concessionaria::class);
